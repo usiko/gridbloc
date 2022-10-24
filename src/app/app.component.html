@@ -2,8 +2,10 @@
 
 <ng-container *ngFor="let item of data">
   <ng-template #template>
-    <h1>{{item.title}}</h1>
-    <p>{{item.content}}</p>
+    <div class="template">
+      <h1>{{item.title}}</h1>
+      <p>{{item.content}}</p>
+    </div>
   </ng-template>
   <ng-container *ngIf="template|getTemplate:blocs:item.id"></ng-container>
   <!-- assignement template-->

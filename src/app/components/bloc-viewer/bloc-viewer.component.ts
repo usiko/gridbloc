@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NgxMasonryOptions } from 'ngx-masonry';
 import { IBLocItem } from './model/bloc-viewer.model';
 
 @Component({
@@ -9,6 +10,11 @@ import { IBLocItem } from './model/bloc-viewer.model';
 export class BlocViewerComponent implements OnInit {
 
   @Input() blocItems: IBLocItem[] = [];
+
+  masonryOptions: NgxMasonryOptions = {
+    gutter: 10,
+
+  };
   constructor() { }
 
   ngOnInit(): void {

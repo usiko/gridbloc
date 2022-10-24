@@ -20,7 +20,8 @@ import { GetTemplatePipe } from './pipe/get-template.pipe';
   exports: [
     BlocViewerComponent,
     GetTemplatePipe,
-    GetTemplateDataPipe
+    GetTemplateDataPipe,
+    NgxMasonryModule
   ],
   providers: [],
   bootstrap: []
