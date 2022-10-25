@@ -1,5 +1,6 @@
 <ngx-masonry [options]="masonryOptions">
   <div ngxMasonryItem class="masonry-item" *ngFor="let item of blocItems">
-    <ng-container *ngTemplateOutlet="item.template"></ng-container>
+    <app-maximizable-bloc [minTemplate]="item.template" [maxTemplate]="item.template"></app-maximizable-bloc>
+
   </div>
 </ngx-masonry>

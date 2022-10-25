@@ -1,0 +1,16 @@
+<div class=" flip container">
+  <div class="inner">
+    <div class="front min-view">
+      <div *ngIf="minTemplate">
+        min
+        <ng-container *ngTemplateOutlet="minTemplate"></ng-container>
+      </div>
+    </div>
+    <div class="back max-view">
+      <div *ngIf="maxTemplate">
+        max
+        <ng-container *ngTemplateOutlet="maxTemplate"></ng-container>
+      </div>
+    </div>
+  </div>
+</div>
