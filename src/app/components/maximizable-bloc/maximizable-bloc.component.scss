@@ -1,51 +1,50 @@
 .flip {
-  background-color: transparent;
+	background-color: transparent;
 
-  perspective: 1000px;
-  height: 300px;
-  width: 100%;
-  transition: height 350ms, width 350ms;
+	perspective: 1000px;
+	width: 100%;
+	height: auto;
+	transition: height 2s ease-in-out, width 2s ease-in-out;
 
-  .inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	.inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transition: transform 2s;
+		transform-style: preserve-3d;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-    .front,
-    .back {
+		.front,
+		.back {
 
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-    }
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
 
-    .front {
-      background: blue;
-    }
+		.front {
+			background: blue;
+		}
 
-    .back {
-      position: absolute;
-      background: red;
-      transform: rotateY(180deg);
-    }
-  }
+		.back {
+			position: absolute;
+			background: red;
+			transform: rotateY(180deg);
+		}
+	}
 
-  &.maximised {
-    height: 100%;
-    width: 100%;
+	&.maximised {
+		height: 100%;
+		width: 100%;
 
-    .inner {
 
-      transform: rotateY(180deg);
-    }
-  }
+		.inner {
 
-  &:hover {}
+			transform: rotateY(180deg);
+		}
+	}
 }
