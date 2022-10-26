@@ -3,7 +3,8 @@
 
   perspective: 1000px;
   height: 300px;
-  width: 300px;
+  width: 100%;
+  transition: height 350ms, width 350ms;
 
   .inner {
     position: relative;
@@ -16,7 +17,7 @@
 
     .front,
     .back {
-      position: absolute;
+
       width: 100%;
       height: 100%;
       top: 0;
@@ -30,14 +31,21 @@
     }
 
     .back {
+      position: absolute;
       background: red;
       transform: rotateY(180deg);
     }
   }
 
-  &:hover {
+  &.maximised {
+    height: 100%;
+    width: 100%;
+
     .inner {
+
       transform: rotateY(180deg);
     }
   }
+
+  &:hover {}
 }

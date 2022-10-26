@@ -12,12 +12,29 @@ export class BlocViewerComponent implements OnInit {
   @Input() blocItems: IBLocItem[] = [];
 
   masonryOptions: NgxMasonryOptions = {
-    gutter: 10,
+    // gutter: 10,
 
   };
+
+  maximisedItem?: IBLocItem;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  maximiseChange(item: IBLocItem, state: boolean) {
+    if (state) {
+      this.maximisedItem = item;
+    }
+    else {
+      if (item === this.maximisedItem) {
+        if (!state) {
+          this.maximisedItem = undefined;
+        }
+      }
+    }
+
   }
 
 }

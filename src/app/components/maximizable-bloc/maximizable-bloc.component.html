@@ -1,4 +1,4 @@
-<div class=" flip container">
+<div class=" flip container" (click)="maximise()" [class.maximised]="maximised">
   <div class="inner">
     <div class="front min-view">
       <div *ngIf="minTemplate">

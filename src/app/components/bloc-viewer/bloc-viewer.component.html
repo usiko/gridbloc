@@ -1,6 +1,7 @@
 <ngx-masonry [options]="masonryOptions">
-  <div ngxMasonryItem class="masonry-item" *ngFor="let item of blocItems">
-    <app-maximizable-bloc [minTemplate]="item.template" [maxTemplate]="item.template"></app-maximizable-bloc>
+  <div ngxMasonryItem class="masonry-item" [class.maximised]="item===maximisedItem" *ngFor="let item of blocItems">
+    <app-maximizable-bloc (maximiseStateChange)="maximiseChange(item,$event)" [minTemplate]="item.template"
+      [maxTemplate]="item.template"></app-maximizable-bloc>
 
   </div>
 </ngx-masonry>
