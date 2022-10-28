@@ -13,7 +13,7 @@ export class MaximizableBlocComponent implements OnInit, AfterViewInit {
 
   @Output() maximiseStateChange = new EventEmitter<boolean>();
 
-  public maximised = false;
+  public maximised?: boolean;
 
   private timerSub?: Subscription;
 

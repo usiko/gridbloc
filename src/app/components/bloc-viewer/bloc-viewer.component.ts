@@ -34,8 +34,8 @@ export class BlocViewerComponent implements OnInit {
   ngOnInit(): void {
 
     this.maximisedSize = {
-      height: window.innerHeight - 20,
-      width: window.innerWidth - 20
+      height: window.innerHeight - 40,
+      width: window.innerWidth - 40
     };
   }
 

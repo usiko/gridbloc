@@ -1,5 +1,5 @@
-<div class=" flip container" #flip (click)="maximise()" [class.maximised]="maximised"
-  [style.height.px]="maximised?maximisedSize.height:lastMinSize.height"
+<div class=" flip container" #flip (click)="maximise()" [class.maximised]="maximised===true"
+  [class.minified]="maximised===false" [style.height.px]="maximised?maximisedSize.height:lastMinSize.height"
   [style.width.px]="maximised?maximisedSize.width:lastMinSize.width">
   <div class="inner">
     <div class="front min-view">
